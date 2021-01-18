@@ -16,25 +16,22 @@ body {
 /* Sidebar */
 
 .feather {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     vertical-align: text-bottom;
 }
 
 .sidebar {
-    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: 48px 0 0; /* Height of navbar */
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
   
 .sidebar-sticky {
     position: relative;
     top: 0;
-    height: calc(100vh - 48px);
+    height: 100%;
     padding-top: .5rem;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -73,4 +70,35 @@ body {
 
 .sidebar .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+#task-add-icon {
+    margin: 3px 3px 0 0;
+    cursor: pointer;
+}
+
+#no-tasks-icon {
+    display: block;
+    width: 256px;
+    height: 256px;
+}
+
+#task-add-input {
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+.task-label {
+    margin-bottom: 0.15rem;
+}
+
+input[type="checkbox"]{
+    margin-right: 0.2rem;
+}
+
+input[type=checkbox]:checked + label{
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: #295939
 }

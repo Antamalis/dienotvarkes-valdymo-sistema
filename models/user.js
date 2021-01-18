@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+const CalendarSchema = require('../schemas/calendar')
 const Schema = mongoose.Schema;
 
 //Create Schema and Model
 const UserSchema = new Schema({
-    email: String,
-    username: String,
-    password: String
+    email: {type: String, unique: true, required: true},
+    username: {type: String, unique: true, required: true},
+    password: {type: String, required: true},
+    calendar: {type: CalendarSchema, default: {}},
 });
 
 //Export the model so we can use it in other files

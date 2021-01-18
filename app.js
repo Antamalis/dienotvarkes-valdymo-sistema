@@ -7,12 +7,13 @@ const config = require('./config/database');
 const path = require('path');
 
 const ensureAuthenticated = require('./config/ensureAuthenticated')
-const initializePassport = require("./config/passport")
+const initializePassport = require("./config/passport");
 initializePassport(passport)
 
 //Init app
 const app = express();
 app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 //Start server
 const server = app.listen(1800, () => {
@@ -25,6 +26,7 @@ app.set('view engine', 'ejs');
 //Set public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Set up session
 app.use(flash())
 app.use(session({
     secret: 'labai paslaptinga',
@@ -44,12 +46,13 @@ db.once('open', () =>{
     console.log('Connection error:',error);
 });
 
-
 //Index route
 app.get('/', ensureAuthenticated, (req, res) => {
     res.render('index', {user: req.user});
 });
 
+//Other routes
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
 app.use('/logout', require('./routes/logout'));
+app.use('/api', require('./routes/api'));
