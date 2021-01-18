@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 const path = require('path');
 
+const ensureAuthenticated = require('./config/ensureAuthenticated')
 const initializePassport = require("./config/passport")
 initializePassport(passport)
 
@@ -45,9 +46,10 @@ db.once('open', () =>{
 
 
 //Index route
-app.get('/', (req, res) => {
+app.get('/', ensureAuthenticated, (req, res) => {
     res.render('index', {user: req.user});
 });
 
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
+app.use('/logout', require('./routes/logout'));
