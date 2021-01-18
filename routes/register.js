@@ -3,11 +3,11 @@ const router = express.Router();
 const bcrypt = require('bcrypt')
 const User = require('../models/user.js');
 
-router.get('/', (req, res) => {
-    res.render('register');
+router.get('/', ensureNotAuthenticated, (req, res) => {
+    res.render('register', {user: req.user});
 });
 
-router.post('/', async (req, res) => {
+router.post('/', ensureNotAuthenticated, async (req, res) => {
     try {
         const {email, username, password} = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -29,17 +29,20 @@ router.post('/', async (req, res) => {
         });
     } catch (error) {
         if(error.name == "UserException"){
-            const message = encodeURIComponent(error.message);
-            res.redirect('register/?error=' + message);
+            req.flash('error', error.message);
+            res.redirect('register');
         }else{
             console.log(error)
         }
     }
 })
 
-function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) { return next(); }
-    res.redirect('/');
+function ensureNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { 
+        res.redirect('/');
+    }else{
+        return next();
+    }
 }
 
 function UserException(message) {

@@ -2,18 +2,36 @@
 <html lang="en">
 <head>
     <%- include('partials/head'); %>
+    <title>Login</title>
 </head>
 <body>
     <%- include('partials/navbar'); %>
-    <h1>Login</h1>
-    <form action="/login" method="post">
-        <label for="username"></label>
-        <input type="text" name="username" id="username">
-
-        <label for="password"></label>
-        <input type="password" name="password" id="password">
-
-        <button type="submit">Register</button>
+    <div class="container">
+        <div class="row text-white">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                <% if (messages.error) { %>
+                    <small id="login-error"><%= messages.error %> </small>
+                <% } %>
+                <h1 class="display-4 py-2 text-truncate">Prisijungti</h1>
+                <div class="px-2">
+                    <form action="/login" method="POST" class="justify-content-center">
+                        <div class="form-group">
+                            <label for="username">Vartotojo vardas</label>
+                            <input type="text" name="username" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Slaptažodis</label>
+                            <input type="password" name="password" class="form-control" id="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Prisijungti</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/register" method="post">
     </form>
+    <%- include('partials/scripts'); %>
+    <script src="/js/login.js"></script>
 </body>
 </html>
