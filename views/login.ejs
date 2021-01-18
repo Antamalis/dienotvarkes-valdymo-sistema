@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <%- include('partials/navbar'); %>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <label for="username"></label>
+        <input type="text" name="username" id="username">
+
+        <label for="password"></label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

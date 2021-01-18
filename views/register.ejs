@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <%- include('partials/navbar'); %>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <label for="email">El. paštas</label>
+        <input type="email" name="email" id="email">
+
+        <label for="username">Vartotojo vardas</label>
+        <input type="text" name="username" id="username">
+
+        <label for="password">Slaptažodis</label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit">Register</button>
+    </form>
+    <%- include('partials/scripts'); %>
+</body>
+</html>
