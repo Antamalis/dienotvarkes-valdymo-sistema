@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const CalendarSchema = require('../schemas/calendar')
+const CalendarSchema = require('../schemes/calendar')
 const Schema = mongoose.Schema;
 
 //Create Schema and Model

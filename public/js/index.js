@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const addTaskForm = document.querySelector("#task-add-form");
     const addTaskInput = document.querySelector("#task-add-input");
+    const editTaskModal = document.getElementById('editTaskModal');
 
     let tasks = [];
 
@@ -13,6 +14,38 @@ $(document).ready(function () {
         
         addTask(data);
     })
+
+    editTaskModal.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const data = { taskName: addTaskInput.value };
+        
+        addTask(data);
+    })
+    
+    editTaskModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget
+        const title = button.getAttribute('data-bs-title');
+        const comment = button.getAttribute('data-bs-comment');
+        const taskId = button.getAttribute('data-bs-id');
+
+        const modalBodyTitle = editTaskModal.querySelector('.modal-body input[type="text"]');
+        const modalBodyComment = editTaskModal.querySelector('.modal-body textarea');
+        const modalBodyId = editTaskModal.querySelector('.modal-body input[type="hidden"]');
+
+        modalBodyTitle.value = title;
+        modalBodyComment.value = comment;
+        modalBodyId.value = taskId
+    })
+
+    editTaskModal.querySelector("#task-edit-submit").addEventListener('click', (event) => {
+        event.preventDefault();
+        const taskId = editTaskModal.querySelector('.modal-body input[type="hidden"]').value;
+        const newTitle = editTaskModal.querySelector('.modal-body input[type="text"]').value;
+        const newComment = editTaskModal.querySelector('.modal-body textarea').value;
+        editTask(taskId, newTitle, newComment);
+        editTaskModal.dispose();
+    });
 
 
     function renderTasks() {
@@ -36,7 +69,12 @@ $(document).ready(function () {
                     let taskElement = document.importNode(document.getElementById("task-template").content, true);
                     taskElement.querySelector("label").htmlFor = task._id;
                     taskElement.querySelector("label").textContent = task.name;
-                    taskElement.querySelector("input").id = task._id
+                    taskElement.querySelector("input").id = task._id;
+                    taskElement.querySelector("small").textContent = task.comments
+                    taskElement.querySelector("svg").setAttribute("data-bs-title", task.name);
+                    taskElement.querySelector("svg").setAttribute("data-bs-comment", task.comments);
+                    taskElement.querySelector("svg").setAttribute("data-bs-id", task._id);
+
                     taskElement.querySelector("input").addEventListener('change', (event) => {
                         const data = {
                             taskId: task._id,
@@ -85,6 +123,23 @@ $(document).ready(function () {
         })
         .finally(() => {
             addTaskForm.reset();
+        })
+    }
+    
+    function editTask(taskId, taskName, taskComment) {
+        const data = { taskId, taskName, taskComment };
+
+        fetch('/api/editTask', {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: 'POST',
+            body: JSON.stringify(data)
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            tasks = data.tasks
+            renderTasks();
         })
     }
 });

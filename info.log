@@ -1,0 +1,92 @@
+[2021-05-17 14:36:10] debug: Fetched calendar for user 60a247727de54e483c896ef6:
+{
+  totalTasks: 3,
+  _id: 60a247727de54e483c896ef5,
+  tasks: [
+    {
+      comments: '44565555',
+      completed: true,
+      _id: 60a247797de54e483c896f03,
+      name: 'paglaiau gal fi'
+    },
+    {
+      comments: 'fgdfgdfg',
+      completed: true,
+      _id: 60a2477b7de54e483c896f08,
+      name: 'dddddaa'
+    },
+    {
+      comments: 'asdasd',
+      completed: true,
+      _id: 60a24aa1eaa96e233cd33f26,
+      name: 'lol kaip juoking'
+    }
+  ]
+}
+[2021-05-17 14:36:13] debug: Added new task "Hello" for user 60a247727de54e483c896ef6
+[2021-05-17 14:36:18] debug: Edited task 60a2552df0728254d85702fd for user 60a247727de54e483c896ef6:
+Name: Hello
+Comment: Comment
+[2021-05-17 14:39:31] debug: Fetched calendar for user 60a255e7f0728254d857030d:
+{ totalTasks: 0, _id: 60a255e7f0728254d857030c, tasks: [] }
+[2021-05-17 14:40:00] debug: Added new task "Daryti namu darbus" for user 60a255e7f0728254d857030d
+[2021-05-17 14:40:09] debug: Edited task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
+Name: Daryti namu darbus
+Comment: Komentaras
+[2021-05-17 14:40:15] debug: Edited task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
+Name: Daryti namu darbus
+Comment: 
+[2021-05-17 14:40:16] debug: Updated task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
+Completed: true
+[2021-05-17 14:40:18] debug: Fetched calendar for user 60a255e7f0728254d857030d:
+{
+  totalTasks: 1,
+  _id: 60a255e7f0728254d857030c,
+  tasks: [
+    {
+      comments: '',
+      completed: true,
+      _id: 60a25610f0728254d857031a,
+      name: 'Daryti namu darbus'
+    }
+  ]
+}
+[2021-10-04 13:52:48] debug: Fetched calendar for user 615adcf6cbfe2c240cd82812:
+{ totalTasks: 0, _id: 615adcf6cbfe2c240cd82811, tasks: [] }
+[2021-10-04 13:52:55] debug: Added new task "fffffffffff" for user 615adcf6cbfe2c240cd82812
+[2021-10-13 09:59:49] debug: Fetched calendar for user 616683e2d92ea74820528f33:
+{ totalTasks: 0, _id: 616683e2d92ea74820528f32, tasks: [] }
+[2021-10-13 10:18:32] debug: Fetched calendar for user 616683e2d92ea74820528f33:
+{ totalTasks: 0, _id: 616683e2d92ea74820528f32, tasks: [] }
+[2021-10-13 10:18:37] debug: Added new task "asdasd" for user 616683e2d92ea74820528f33
+[2021-10-13 10:18:38] debug: Added new task "sdfsdg" for user 616683e2d92ea74820528f33
+[2021-10-15 20:04:11] debug: Fetched calendar for user 6169b488529d4163887aef8a:
+{ totalTasks: 0, _id: 6169b488529d4163887aef89, tasks: [] }
+[2021-10-15 20:04:15] debug: Added new task "Namu darbai" for user 6169b488529d4163887aef8a
+[2021-10-15 20:04:29] debug: Added new task "Išvesti šunį" for user 6169b488529d4163887aef8a
+[2021-10-15 20:04:50] debug: Added new task "Apsipirkti parduotuvėj" for user 6169b488529d4163887aef8a
+[2021-10-15 20:09:54] debug: Fetched calendar for user 6169b488529d4163887aef8a:
+{
+  totalTasks: 3,
+  _id: 6169b488529d4163887aef89,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 6169b48f529d4163887aef97,
+      name: 'Namu darbai'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 6169b49d529d4163887aef9c,
+      name: 'Išvesti šunį'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 6169b4b2529d4163887aefa1,
+      name: 'Apsipirkti parduotuvėj'
+    }
+  ]
+}

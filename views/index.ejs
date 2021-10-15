@@ -39,11 +39,47 @@
     </div>
 
     <template id="task-template">
-        <div class="d-flex flex-row border-bottom task m-1">
-            <input type="checkbox" id="">
-            <label class="task-label"></label>
+        <div class="d-flex flex-column border-bottom task m-1">
+            <div class="d-flex flex-row m-1">
+              <input type="checkbox" id="" class="mr-2">
+              <label class="task-label"></label>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit ms-auto" id="task-edit-icon" data-bs-toggle="modal" data-bs-target="#editTaskModal" style="cursor: pointer;">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </div>
+            <small class="text-muted" style="margin-left: 1.25rem;"></small>
+            
         </div>
     </template>
+
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editTaskModalLabel">Edit task</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="edit-task-form">
+                <input type="hidden" id="edit-task-id-hidden">
+                <div class="mb-3">
+                  <label for="task-edit-title" class="col-form-label">Title:</label>
+                  <input type="text" class="form-control" id="task-edit-title">
+                </div>
+                <div class="mb-3">
+                  <label for="task-edit-comment" class="col-form-label">Comment:</label>
+                  <textarea class="form-control" id="task-edit-comment"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="task-edit-submit" data-bs-dismiss="modal">Complete edit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
     <%- include('partials/scripts'); %>
     <script src="/js/index.js"></script>
 </body>
