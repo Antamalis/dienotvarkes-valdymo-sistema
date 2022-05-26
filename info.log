@@ -1,92 +1,306 @@
-[2021-05-17 14:36:10] debug: Fetched calendar for user 60a247727de54e483c896ef6:
+[2022-05-19 17:29:33] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:29:33] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
 {
-  totalTasks: 3,
-  _id: 60a247727de54e483c896ef5,
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
   tasks: [
     {
-      comments: '44565555',
-      completed: true,
-      _id: 60a247797de54e483c896f03,
-      name: 'paglaiau gal fi'
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
     },
     {
-      comments: 'fgdfgdfg',
-      completed: true,
-      _id: 60a2477b7de54e483c896f08,
-      name: 'dddddaa'
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
     },
     {
-      comments: 'asdasd',
-      completed: true,
-      _id: 60a24aa1eaa96e233cd33f26,
-      name: 'lol kaip juoking'
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
     }
   ]
 }
-[2021-05-17 14:36:13] debug: Added new task "Hello" for user 60a247727de54e483c896ef6
-[2021-05-17 14:36:18] debug: Edited task 60a2552df0728254d85702fd for user 60a247727de54e483c896ef6:
-Name: Hello
-Comment: Comment
-[2021-05-17 14:39:31] debug: Fetched calendar for user 60a255e7f0728254d857030d:
-{ totalTasks: 0, _id: 60a255e7f0728254d857030c, tasks: [] }
-[2021-05-17 14:40:00] debug: Added new task "Daryti namu darbus" for user 60a255e7f0728254d857030d
-[2021-05-17 14:40:09] debug: Edited task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
-Name: Daryti namu darbus
-Comment: Komentaras
-[2021-05-17 14:40:15] debug: Edited task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
-Name: Daryti namu darbus
-Comment: 
-[2021-05-17 14:40:16] debug: Updated task 60a25610f0728254d857031a for user 60a255e7f0728254d857030d:
+[2022-05-19 17:29:43] debug: Updated task 61ae4ac921229756e0c1ff54 for user 61a77e9ac561735af4de43bb:
 Completed: true
-[2021-05-17 14:40:18] debug: Fetched calendar for user 60a255e7f0728254d857030d:
+[2022-05-19 17:29:44] debug: Updated task 61ae4ac921229756e0c1ff54 for user 61a77e9ac561735af4de43bb:
+Completed: false
+[2022-05-19 17:29:45] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:29:46] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:29:46] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:29:54] debug: Fetched project stats for project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:29:55] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:29:55] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:01] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:30:01] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:01] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:30:03] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:03] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
 {
-  totalTasks: 1,
-  _id: 60a255e7f0728254d857030c,
-  tasks: [
-    {
-      comments: '',
-      completed: true,
-      _id: 60a25610f0728254d857031a,
-      name: 'Daryti namu darbus'
-    }
-  ]
-}
-[2021-10-04 13:52:48] debug: Fetched calendar for user 615adcf6cbfe2c240cd82812:
-{ totalTasks: 0, _id: 615adcf6cbfe2c240cd82811, tasks: [] }
-[2021-10-04 13:52:55] debug: Added new task "fffffffffff" for user 615adcf6cbfe2c240cd82812
-[2021-10-13 09:59:49] debug: Fetched calendar for user 616683e2d92ea74820528f33:
-{ totalTasks: 0, _id: 616683e2d92ea74820528f32, tasks: [] }
-[2021-10-13 10:18:32] debug: Fetched calendar for user 616683e2d92ea74820528f33:
-{ totalTasks: 0, _id: 616683e2d92ea74820528f32, tasks: [] }
-[2021-10-13 10:18:37] debug: Added new task "asdasd" for user 616683e2d92ea74820528f33
-[2021-10-13 10:18:38] debug: Added new task "sdfsdg" for user 616683e2d92ea74820528f33
-[2021-10-15 20:04:11] debug: Fetched calendar for user 6169b488529d4163887aef8a:
-{ totalTasks: 0, _id: 6169b488529d4163887aef89, tasks: [] }
-[2021-10-15 20:04:15] debug: Added new task "Namu darbai" for user 6169b488529d4163887aef8a
-[2021-10-15 20:04:29] debug: Added new task "Išvesti šunį" for user 6169b488529d4163887aef8a
-[2021-10-15 20:04:50] debug: Added new task "Apsipirkti parduotuvėj" for user 6169b488529d4163887aef8a
-[2021-10-15 20:09:54] debug: Fetched calendar for user 6169b488529d4163887aef8a:
-{
-  totalTasks: 3,
-  _id: 6169b488529d4163887aef89,
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
   tasks: [
     {
       comments: '',
       completed: false,
-      _id: 6169b48f529d4163887aef97,
-      name: 'Namu darbai'
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
     },
     {
       comments: '',
       completed: false,
-      _id: 6169b49d529d4163887aef9c,
-      name: 'Išvesti šunį'
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
     },
     {
       comments: '',
       completed: false,
-      _id: 6169b4b2529d4163887aefa1,
-      name: 'Apsipirkti parduotuvėj'
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
     }
   ]
 }
+[2022-05-19 17:30:06] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:30:06] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:06] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:30:11] debug: Fetched project stats for project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:30:11] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:30:11] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:19] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:19] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
+{
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
+    }
+  ]
+}
+[2022-05-19 17:30:22] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-05-19 17:30:22] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-05-19 17:30:22] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:30:25] debug: Fetched project task 61ae5bb6ec020c5b40435098 data of project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-05-19 17:30:30] debug: Fetched project task 61ae5bb6ec020c5b40435098 data of project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb

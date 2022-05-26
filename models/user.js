@@ -8,6 +8,10 @@ const UserSchema = new Schema({
     username: {type: String, unique: true, required: true},
     password: {type: String, required: true},
     calendar: {type: CalendarSchema, default: {}},
+    projects: {type: [{
+        projectId: {type: String, required: true},
+        projectTitle: {type: String, required: true}
+    }]}
 });
 
 //Export the model so we can use it in other files

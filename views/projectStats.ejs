@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <div class="d-flex flex-column h-100" id="root">
+        <%- include('partials/navbar'); %>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <%- include('partials/sidebar');  %> 
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-11 px-4 d-flex flex-column">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div class="d-flex align-items-center">
+                            <h1 class="h2">Projekto "<%= title %>" statistika</h1>
+                            <span data-feather="arrow-left" class="ms-2 pointer" id="backToProject"></span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center h-100">
+                        <div class="col-10 d-flex main-area flex-column">
+                            <div class="spinner-grow" role="status" id="task-spinner">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="d-flex flex-row flex-wrap justify-content-evenly">
+                                <div class="text-center stats shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h3>Iš viso užduočių</h3>
+                                    <h1 id="totalTasks"></h1>
+                                </div>
+                                <div class="text-center stats shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h3>Iš viso narių</h3>
+                                    <h1 id="totalMembers"></h1>
+                                </div>
+                                <div class="text-center stats shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h3>Narių sąrašas</h3>
+                                    <h5 id="memberList" class="fw-bolder"></h5>
+                                </div>
+                            </div>
+                            <div id="statistics" class="d-flex flex-row flex-wrap justify-content-evenly">
+                                <div class="text-center chart shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h5>Atliktos užduotys</h5>
+                                    <canvas id="completedTasksChart"></canvas>
+                                </div>
+
+                                <div class="text-center chart shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h5>Neatliktos užduotys</h5>
+                                    <canvas id="uncompletedTasksChart"></canvas>
+                                </div>
+
+                                <div class="text-center chart shadow-sm rounded" id="completedTasksChartContainer">
+                                    <h5>Užduočių statusas</h5>
+                                    <canvas id="tasksStatusChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <input type="text" id="getProjectId" class="d-none" value="<%=id%>">
+
+    <%- include('partials/scripts'); %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/projectStats.js"></script>
+</body>
+</html>

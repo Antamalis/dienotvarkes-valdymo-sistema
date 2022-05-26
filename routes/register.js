@@ -25,15 +25,15 @@ router.post('/', ensureNotAuthenticated, async (req, res) => {
             throw new UserException("Vartotojo vardas jau egzistuoja!");
         }
 
-        await newUser.save().then(() => {
-            res.redirect('/login')
-        });
+        await newUser.save()
+
+        res.redirect('/login')
     } catch (error) {
         if(error.name == "UserException"){
             req.flash('error', error.message);
             res.redirect('register');
         }else{
-            console.log(error)
+            console.log(error);
         }
     }
 })

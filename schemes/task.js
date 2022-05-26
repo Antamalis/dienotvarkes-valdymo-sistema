@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //Create Schema and Model
 const TaskSchema = new Schema({
     name: {type: String, required: true},
-    dueDate: Date,
+    dueDate: { type: Number },
     comments: {type: String, default: ""},
     completed: {type: Boolean, default: false}
 });

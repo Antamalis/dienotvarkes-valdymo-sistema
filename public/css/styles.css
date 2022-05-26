@@ -34,14 +34,7 @@ body {
     height: 100%;
     padding-top: .5rem;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-  
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-    .sidebar-sticky {
-      position: -webkit-sticky;
-      position: sticky;
-    }
+    overflow-y: auto;
 }
   
 .sidebar .nav-link {
@@ -54,13 +47,8 @@ body {
     color: #999;
 }
   
-.sidebar .nav-link.active {
-    color: #007bff;
-}
-  
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
+.sidebar .nav-link:hover .feather {
+    color: black;
 }
   
 .sidebar-heading {
@@ -70,6 +58,77 @@ body {
 
 .sidebar .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+.fa-calendar-alt {
+    font-size: 24px;
+    margin-right: 0.5rem;
+}
+
+.task, .level1 {
+    width: 98%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.level2 {
+    width: 96%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.task-list-comment {
+    margin-left: 1.25rem
+}
+
+.collapse-item {
+    padding: 0 0.25rem 0 0.25rem !important;
+}
+
+.landing-title {
+    font-weight: bold;
+    font-size: 4.5rem;
+}
+
+.landing-subtitle {
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
+.landing-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    max-width: 30%;
+    margin: auto;
+}
+
+.landing-button {
+    background-color: #f8f1f1;
+    border-color: #f8f1f1;
+    font-weight: 600;
+}
+
+.landing-container {
+    min-width: 65%;
+    margin-bottom: 2rem;
+}
+
+.landing-image {
+    border-radius: 1rem;
+    width: 65%;
+}
+
+.today {
+    text-decoration: underline;
+}
+
+.tomorrow {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom, #41b4e5 0%, #7597c8 100%);
 }
 
 #task-add-icon {
@@ -89,16 +148,94 @@ body {
     border-bottom: 2px solid;
 }
 
+#login-error {
+    color: red;
+}
+
+#projectCollapse {
+    width: 90%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#chat {
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#chat-input-container {
+    height: fit-content;
+    width: 100%;
+}
+
+#chat-input {
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+#chat-section {
+    max-height: calc(100vh - 60px)
+}
+
+#completedTasksChartContainer {
+
+}
+
+.message-content {
+    display: block;
+    word-break: break-word;
+}
+
+.task-edit-icon {
+    margin-right: 0.25rem;
+}
+
 .task-label {
     margin-bottom: 0.15rem;
 }
 
-input[type="checkbox"]{
+.pointer {
+    cursor: pointer !important;
+}
+
+.hr {
+    display: block;
+    flex: 1;
+    margin-left: 1rem;
+    height: 3px;
+    background: #CED0D3;
+}
+
+.chart {
+    height: 38vh;
+    width: 36vw;
+    margin-bottom: 1.2rem;
+    background-color: #f6f3f3 ;
+}
+
+.stats {
+    width: 25vw;
+    margin-bottom: 1.2rem;
+    background-color: #f6f3f3 ;
+}
+
+.personal-task-checkbox, .project-task-checkbox {
     margin-right: 0.2rem;
 }
 
-input[type=checkbox]:checked + label{
+.personal-task-checkbox:checked + label, .project-task-complete{
     opacity: 0.5;
     text-decoration: line-through;
     color: #295939
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none; 
 }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <div class="d-flex flex-column h-100" id="root">
+        <%- include('partials/navbar'); %>
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <%- include('partials/sidebar');  %> 
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 d-flex flex-column">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div class="d-flex align-items-center">
+                            <h1 class="h2"><%= title %></h1>
+                            <% if (user._id == creatorId) { %>
+                                <span data-feather="user-plus" class="ms-2 pointer" id="addMemberButton" data-bs-toggle="modal" data-bs-target="#addMemberModal"></span>
+                                <span data-feather="trash-2" class="ms-2 pointer" id="deleteProjectButton" data-bs-toggle="modal" data-bs-target="#deleteProjectModal"></span>
+                            <% } %>
+                            <span data-feather="pie-chart" class="ms-2 pointer" id="viewStats"></span>
+                        </div>
+                        <% if (user._id == creatorId) { %>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                
+                                <span data-feather="plus" id="task-add-icon"></span>
+                                <form action="/api/addTask" method="post" id="task-add-form">
+                                    <input placeholder="Pridėti užduotį..." type="text" name="taskName" id="task-add-input" required>
+                                </form>
+                            </div>
+                        <% } %>
+                        <!-- <div class="btn-toolbar mb-2 mb-md-0">
+                                
+                            <span data-feather="plus" id="task-search-icon"></span>
+                            <form action="/api/addTask" method="post" id="task-search-form">
+                                <input placeholder="Pridėti užduotį..." type="text" name="taskName" id="task-search-input" required>
+                            </form>
+                        </div> -->
+                    </div>
+                    <div class="d-flex justify-content-center h-100">
+                        <div class="col-10 d-flex main-area justify-content-center align-items-center flex-column">
+                            <div class="spinner-grow" role="status" id="task-spinner">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div id="no-tasks-notification" hidden>
+                                <span class="m-auto" data-feather="smile" id="no-tasks-icon"></span>
+                                <h2>Šiame projekte nėra neatliktų uždočių.</h2>
+                            </div>
+                            <div id="task-list">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <section id="chat-section" class="col-lg-2 col-md-2 d-flex py-2 flex-column h-100 bg-light border-start">
+                    <div id="chat" class="d-flex flex-column flex-grow-1">
+                        
+                    </div>
+                    <div id="chat-input-container" class="mt-2">
+                        <input type="text" id="chat-input" class="form-control">
+                    </div>
+                </section>
+                <section id="sidebar-spinner" class="d-none">
+                    <div class="spinner-grow" role="status" id="task-spinner">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </section>
+                <section id="task-data" class="d-none flex-column col-lg-2 col-md-2 h-100 bg-light border-start py-2 align-content-center">
+                    <h3></h3>
+                    <form id="task-data-form">
+                        <div class="mb-3">
+                            <label for="selectedTaskName" class="form-label">Pavadinimas</label>
+                            <input type="text" class="form-control" id="selectedTaskName" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="selectedTaskComment" class="form-label">Komentaras</label>
+                            <textarea class="form-control" id="selectedTaskComment" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="selectedTaskAssignee" class="form-label">Užduotis priskirta</label>
+                            <select class="form-select form-select-sm" id="selectedTaskAssignee">
+                                <option value="none">Niekam</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="selectedTaskDueDate" class="form-label">Terminas</label>
+                            <input type="datetime-local" class="form-control" id="selectedTaskDueDate">
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="isTaskComplete">
+                            <label class="form-check-label no-select" for="isTaskComplete">Ar užduoties atlikta?</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-secondary" id="task-data-close">Uždaryti</button>
+                            <button type="submit" class="btn btn-primary" id="task-data-submit" >Išsaugoti pakeitimus</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <input type="text" id="getProjectId" class="d-none" value="<%=id%>">
+    <input type="text" id="getUsername" class="d-none" value="<%=user.username%>">
+
+    <template id="chat-message-template">
+        <div class="d-flex">
+            <div class="fw-bold message-sender me-1"></div>
+            <div class="message-content"></div>
+        </div>
+    </template>
+
+    <div class="modal fade" id="deleteProjectModal" tabindex="-1" aria-labelledby="deleteProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteProjectModalLabel">Projekto kūrimas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="delete-project-form">
+                <input type="hidden" id="delete-project-id-hidden">
+                <div class="mb-3">
+                  <p>Norint ištrinti šį projektą, įraškite projekto pavadinima <span class="fw-bold"><%= title %></span> žemiau</p>
+                  <input type="text" class="form-control" id="delete-project-title">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atšaukti</button>
+                <button type="submit" class="btn btn-primary" id="delete-project-submit" data-bs-dismiss="modal" disabled>Ištrinti projektą</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addMemberModalLabel">Projekto kūrimas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="add-member-form">
+                <input type="hidden" id="add-member-id-hidden">
+                <div class="mb-3">
+                  <p>Įrasykite vartotojų, kuriuos norite pridėti prie šio projekto, vardus. Norint pridėti keletą vartotojų vienu metu, atskirkite jų vardus nauja eilute.</p>
+                  <textarea id="users-to-add" cols="48" rows="10" placeholder="pirmas vartotojas&#10;antras vartotojas&#10;trecias vartotojas&#10;...">
+                </textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atšaukti</button>
+                <button type="submit" class="btn btn-primary" id="add-member-submit" data-bs-dismiss="modal">Pridėti narius</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-absolute top-0 end-0 p-3" id="toastContaiter">
+
+    </div>
+
+    <template id="errorToastTemplate">
+        <div class="toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto toast-title"></strong>
+              <small class="text-muted toast-time"></small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            </div>
+        </div>
+    </template>
+
+    <template id="successToastTemplate">
+        <div class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto toast-title"></strong>
+              <small class="text-muted toast-time"></small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            </div>
+        </div>
+    </template>
+
+    <template id="not-assigned-heading">
+        <div class="d-flex align-items-center mt-3">
+          <h4></h4>
+          <span class="hr"></span>
+        </div>
+    </template>    
+
+    <template id="assigned-heading">
+        <div class="d-flex align-items-center mt-3" data-bs-toggle="collapse" href="" role="button" aria-expanded="false" aria-controls="projectCollapse">
+          <h4></h4>
+          <span class="hr"></span>
+        </div>
+    </template>
+
+    <template id="date-heading">
+        <div class="d-flex align-items-center mt-3 level1">
+            <h5></h5>
+            <span class="hr"></span>
+        </div>
+    </template>
+
+    <template id="task-template">
+        <div class="d-flex flex-column border-bottom level2 mb-1">
+            <div class="d-flex flex-row m-1">
+              <input name="currentTask" type="radio" class="mr-2 project-task-checkbox">
+              <label class="task-label no-select"></label>
+            </div>
+            <small class="text-muted task-list-comment"></small>
+        </div>
+    </template>
+
+    <%- include('partials/scripts'); %>
+    <script src="/js/project.js"></script>
+</body>
+</html>
