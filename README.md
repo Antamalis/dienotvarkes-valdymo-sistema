@@ -6,4 +6,4 @@ Norint pasileisti šią svetainę reikalinga:
 
 Atsisiuntus projektą ir atsidarius root aplankalą, per komandinę eilutę įrašykite dvi komandas: ```npm install``` ir ```npm update```.
 
-Projektą paleisti galitu su ```node app``` komanda.
+Projektą paleisti galite su ```node app``` komanda.
