@@ -73,7 +73,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //Connect to the DB
-mongoose.connect(config.database, { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 db.once('open', () =>{
