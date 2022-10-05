@@ -304,3 +304,389 @@ Completed: false
 [2022-05-19 17:30:22] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
 [2022-05-19 17:30:25] debug: Fetched project task 61ae5bb6ec020c5b40435098 data of project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
 [2022-05-19 17:30:30] debug: Fetched project task 61ae5bb6ec020c5b40435098 data of project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:46:51] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:46:51] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
+{
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
+    }
+  ]
+}
+[2022-09-22 14:46:55] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-09-22 14:46:55] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:46:55] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:03] debug: Fetched project stats for project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-09-22 14:47:03] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:03] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:06] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-09-22 14:47:06] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:06] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:09] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:09] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
+{
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
+    }
+  ]
+}
+[2022-09-22 14:47:10] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-09-22 14:47:10] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:10] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:22] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:22] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
+{
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
+    }
+  ]
+}
+[2022-09-22 14:47:26] debug: Fetched project 61ae5725ec020c5b40435014:
+[object Object]
+[2022-09-22 14:47:26] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:26] debug: Fetched project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:29] debug: Fetched project task 61b21bfd7d94fc45b4f35eb3 data of project 61ae5725ec020c5b40435014 for user 61a77e9ac561735af4de43bb
+[2022-09-22 14:47:42] debug: Fetched projects for user 61a77e9ac561735af4de43bb:
+[object Object]
+[2022-09-22 14:47:42] debug: Fetched calendar for user 61a77e9ac561735af4de43bb:
+{
+  totalTasks: 15,
+  _id: 61a77e9ac561735af4de43ba,
+  tasks: [
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae492621229756e0c1ff1b,
+      name: 'Išplauti indus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae498c21229756e0c1ff20,
+      name: 'Išsisiurbti kambarį',
+      dueDate: 1642166100000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae499e21229756e0c1ff25,
+      name: 'Nueiti į sporto klubą',
+      dueDate: 1642252500000
+    },
+    {
+      comments: '"NEO Kaunas" boulinge',
+      completed: false,
+      _id: 61ae49b521229756e0c1ff2a,
+      name: 'Boulingas su draugais',
+      dueDate: 1642338900000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49d921229756e0c1ff3b,
+      name: 'Pavedžioti šunį',
+      dueDate: 1642090500000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61ae49e921229756e0c1ff40,
+      name: 'Užbaigti namų darbus',
+      dueDate: 1642079700000
+    },
+    {
+      comments: 'Vis dar reikia sugalvoti dovaną...',
+      completed: false,
+      _id: 61ae4a0521229756e0c1ff45,
+      name: 'Jono gimtadienis!!!',
+      dueDate: 1643116500000
+    },
+    {
+      comments: 'Ir pagaliau pradėti mokintis groti! :)',
+      completed: false,
+      _id: 61ae4ac921229756e0c1ff54,
+      name: 'Nusipirkti pianiną'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21d508d58135fa0a20323,
+      name: 'Peržiūrėti filmą "Inception"'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21de38d58135fa0a2033f,
+      name: 'Nuvežti mašiną į autoservisą'
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21faebf49bf6c88d3f81a,
+      name: 'Išgerti vitaminus',
+      dueDate: 1642191000000
+    },
+    {
+      comments: '',
+      completed: false,
+      _id: 61b21fc1bf49bf6c88d3f829,
+      name: 'Atsiimti siuntinį',
+      dueDate: 1642338900000
+    }
+  ]
+}

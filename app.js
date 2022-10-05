@@ -24,7 +24,7 @@ app.use(express.json())
 
 //Start server
 const server = app.listen(1888, () => {
-    console.log("Server started on port 1800...");    
+    console.log("Server started on port 1888...");    
 });
 
 const io = socket(server);

@@ -11,19 +11,19 @@
   "author": "Mažvydas Janiškevičius",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.0",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "express-flash": "0.0.2",
-    "express-session": "^1.17.1",
-    "feather-icons": "^4.28.0",
-    "mongoose": "^5.11.12",
-    "nodemon": "^2.0.15",
-    "passport": "^0.4.1",
+    "express-session": "^1.17.3",
+    "feather-icons": "^4.29.0",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "socket.io": "^4.4.0",
-    "winston": "^3.3.3",
-    "ws": "^8.2.3"
+    "socket.io": "^4.5.2",
+    "winston": "^3.8.2",
+    "ws": "^8.9.0"
   }
 }
