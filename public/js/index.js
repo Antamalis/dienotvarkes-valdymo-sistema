@@ -49,8 +49,6 @@ $(document).ready(function () {
 
         const modalBodyId = dueDateModal.querySelector('.modal-body input[type="hidden"]');
 
-        console.log(date);
-
         if(date){
             const taskDate = new Date(parseFloat(date));
             const dateMonth = Math.round(taskDate.getMonth() + 1) >= 10 ? Math.round(taskDate.getMonth() + 1) : `0${Math.round(taskDate.getMonth() + 1)}`;
@@ -58,9 +56,6 @@ $(document).ready(function () {
             const dateHour = taskDate.getHours() >= 10 ? taskDate.getHours() : `0${taskDate.getHours()}`;
             const dateMinutes = taskDate.getMinutes() >= 10 ? taskDate.getMinutes() : `0${taskDate.getMinutes()}`;
             const dateValue = `${taskDate.getFullYear()}-${dateMonth}-${dateDay}T${dateHour}:${dateMinutes}`
-
-            console.log(taskDate);
-            console.log(dateValue);
 
             dueDateModal.querySelector('.modal-body input[type="datetime-local"]').value = dateValue
         }else{

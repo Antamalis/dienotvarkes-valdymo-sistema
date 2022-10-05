@@ -68,7 +68,6 @@ router.post('/fetchProjectTaskData', ensureAuthenticated, async (req, res) => {
         res.status(500).json("An error has occured while handling the request. Please try again later!")
 
         logger.error(`Failed to fetch project ${req.body.projectId} data for user ${req.user.id}:\n${error}`);
-        console.log("ZSSSSSSS");
     }
 });
 
@@ -89,7 +88,6 @@ router.post('/updateProjectTaskData', ensureAuthenticated, async (req, res) => {
                 fetchedProject.tasks[projectTaskIndex].assingedTo = taskAssignee;
             }
 
-            console.log(taskDueDate);
             fetchedProject.tasks[projectTaskIndex].dueDate = taskDueDate;
             fetchedProject.tasks[projectTaskIndex].completed = taskStatus;
             
@@ -158,10 +156,6 @@ router.post('/addProjectTask', ensureAuthenticated, async (req, res) => {
         const taskName = req.body.taskName.trim();
         const creatorId = await findProjectCreatorId(projectId);
 
-        console.log(projectId);
-        console.log(taskName);
-        console.log(creatorId);
-
         if (taskName && creatorId == req.user._id) {
             let newTasks = await addProjectTask(projectId, taskName)
             res.json({tasks: newTasks})
@@ -221,10 +215,6 @@ router.post('/updateProjectTaskStatus', ensureAuthenticated, async (req, res) =>
     try {
         const {taskId, completed, projectId} = req.body;
 
-        console.log(taskId);
-        console.log(completed);
-        console.log(projectId);
-
         if (taskId && projectId) {
             const project = await findProjectById(projectId);
 
@@ -246,8 +236,6 @@ router.post('/updateProjectTaskStatus', ensureAuthenticated, async (req, res) =>
 router.post('/deleteTask', ensureAuthenticated, async (req, res) => {
     try {
         const {taskId} = req.body;
-
-        console.log(taskId);
 
         if (taskId) {
             let newTasks = await deleteTask(req.user.id, taskId)
@@ -286,8 +274,6 @@ router.post('/changeDueDate', ensureAuthenticated, async (req, res) => {
 router.post('/createNewProject', ensureAuthenticated, async (req, res) => {
     try {
         const {title} = req.body;
-
-        console.log(`NAME: ${title}`);
 
         if (title) {
             let newProjectList = await createNewProject(req.user.id, req.user.username, title)
@@ -390,8 +376,6 @@ async function editTask(userId, taskId, taskName, taskComment) {
 
 async function deleteTask(userId, taskId) {
     try {
-        console.log(`DELETING ${taskId}`);
-
         let result = await User.findOneAndUpdate({
                 _id: userId
             }, 
@@ -414,8 +398,6 @@ async function deleteTask(userId, taskId) {
 
 async function changeTaskDueDate(userId, taskId, date) {
     try {
-        console.log(`CHAGING DUE DATE ${taskId}`);
-
         let result = await User.findOneAndUpdate({_id: userId, "calendar.tasks._id": taskId}, {$set: {"calendar.tasks.$.dueDate": date}}, {new: true}).lean();
 
         return result.calendar.tasks
@@ -426,8 +408,6 @@ async function changeTaskDueDate(userId, taskId, date) {
 
 async function createNewProject(userId, member, title) {
     try {
-        console.log(`CREATING NEW PROJECT ${title}`);
-
         const newProject = new Project({
             title: title,
             members: [{
@@ -438,8 +418,6 @@ async function createNewProject(userId, member, title) {
         })
 
         const savedProject = await newProject.save();
-
-        console.log("SAVED");
 
         const user = await User.findOneAndUpdate({_id: userId}, {$push: {projects: {projectId: savedProject._id, projectTitle: savedProject.title}}}, {new: true}).lean();
 
@@ -452,7 +430,6 @@ async function createNewProject(userId, member, title) {
 
 async function addMembersToProject(projectId, memberList) {
     try {
-        console.log(`Adding members to project ${memberList}`);
         let existingProject = await findProjectById(projectId);
 
         if(existingProject){

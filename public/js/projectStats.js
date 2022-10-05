@@ -23,7 +23,6 @@ $(document).ready(function () {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             document.querySelector('#task-spinner').remove();
             projectData = data.projectData;
             renderStats(projectData.tasks);

@@ -20,7 +20,6 @@ $(document).ready(function () {
     }
 
     function addProject(title) {
-        console.log(`NAME: ${title}`);
 
         fetch('/api/createNewProject', {
             headers: {
@@ -37,8 +36,6 @@ $(document).ready(function () {
 
     function renderProjects(projects) {
         document.querySelector("#active-projects").innerHTML = "";
-        console.log(`Projects:`);
-        console.log(projects);
 
         for (let i = 0; i < projects.length; i++) {
             const project = projects[i];

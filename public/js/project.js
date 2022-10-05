@@ -84,8 +84,6 @@ $(document).ready(function () {
     deleteProjectInput.addEventListener('input', (event) => {
         const enteredTitle = event.target.value;
 
-        console.log(enteredTitle);
-
         if(enteredTitle == projectData.title){
             document.querySelector("#delete-project-submit").disabled = false;
         }else{
@@ -96,8 +94,6 @@ $(document).ready(function () {
     deleteProjectModal.querySelector("#delete-project-submit").addEventListener('click', (event) => {
         event.preventDefault();
         const enteredTitle = deleteProjectModal.querySelector('#delete-project-title').value;
-
-        console.log(projectData);
 
         if(enteredTitle == projectData.title){
             deleteProject()
@@ -131,9 +127,6 @@ $(document).ready(function () {
         const taskDueDate = taskDataElement.querySelector("#selectedTaskDueDate").value;
         const taskStatus = taskDataElement.querySelector("#isTaskComplete").checked;
 
-        console.log("DUE DATEIASASDDDDD");
-        console.log(taskDueDate);
-
         if(taskName && taskAssignee && (taskStatus === true || taskStatus === false)){
             const data = {
                 taskName,
@@ -154,7 +147,6 @@ $(document).ready(function () {
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 document.getElementById(`${selectedTaskData.taskData._id}`).checked = false;
                 toggleTaskData(false);
                 toggleChat(true);
@@ -176,7 +168,6 @@ $(document).ready(function () {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             projectData.tasks = data.tasks
             renderTasks(projectData.tasks);
         })
@@ -195,7 +186,6 @@ $(document).ready(function () {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             document.querySelector('#task-spinner').remove();
             projectData = data.projectData;
             renderTasks(projectData.tasks);
@@ -214,8 +204,6 @@ $(document).ready(function () {
         .then((data) => {
             if(data.success){
                 window.location.href = '/'
-            }else{
-                console.log("NOT SUCCESS");
             }
         })
     }
@@ -293,9 +281,7 @@ $(document).ready(function () {
         heading.querySelector("h4").textContent = "Niekam nepriskirtos užduotys"
         container.append(heading);
 
-        console.log("ASAAAAAAAAAAAA");
         tasks.forEach(task => {
-            console.log(task);
             let taskElement = prepareTaskElement(task)
             container.append(taskElement)
         });
@@ -326,7 +312,6 @@ $(document).ready(function () {
                 let collapse = document.createElement("div");
 
                 if(username == assignee) {
-                    console.log(`FOUND SAME`);
                     heading.querySelector("h4").style.color = "#17D7A0"
                     heading.querySelector("h4").style.textDecoration  = "underline"
                 }
@@ -358,7 +343,6 @@ $(document).ready(function () {
         }
 
         taskElement.querySelector("input").addEventListener('change', (event) => {
-            console.log(event.target.checked);
             if(event.target.checked){
                 toggleChat(false)
                 toggleTaskData(false)
@@ -405,7 +389,6 @@ $(document).ready(function () {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             selectedTaskData = data
             toggleSidebarSpinner(false)
             toggleTaskData(true)
@@ -450,7 +433,6 @@ $(document).ready(function () {
             taskDataElement.querySelector(`option[value='none']`).selected = "selected"
         }
 
-        console.log(selectedTaskData.canEdit);
         if(!selectedTaskData.canEdit) enableReadOnlyMode()
         else disableReadOnlyMode()
     }
@@ -511,12 +493,9 @@ $(document).ready(function () {
     function createErrorToast(title, time, body) {
         let toastas = document.importNode(document.querySelector("#errorToastTemplate").content, true);
 
-        console.log(toastas);
-
         toastas.querySelector('.toast-title').textContent = title;
         toastas.querySelector('.toast-time').textContent = time;
         toastas.querySelector('.toast-body').textContent = body;
-        console.log();
 
         document.querySelector('#toastContaiter').append(toastas)
         let myToastEl = document.querySelectorAll('.toast')[document.querySelectorAll('.toast').length - 1]

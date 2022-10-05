@@ -15,8 +15,6 @@ router.get('/:id', ensureAuthenticated, async (req, res) => {
             res.render('project', {title: project.title, user: req.user, id: project._id, creatorId});
         }
 
-        console.log("BBBBBBBBBBBBBBBBB");
-
         logger.debug(`Fetched project ${project._id}:\n${project}`);
     } catch (error) {
         res.json({
@@ -34,11 +32,8 @@ router.get('/:id/stats', ensureAuthenticated, async (req, res) => {
         if(project.members.some( (member) => member.userId == req.user._id)){
             //User sending request exists in the member array of project
             res.render('projectStats', {title: project.title, user: req.user, id: project._id});
-            console.log("?????");
         }
-
-        console.log("AAAAAAAAAAAAAAAAAA");
-
+        
         logger.debug(`Fetched project stats for project ${project._id}:\n${project}`);
     } catch (error) {
         res.json({
