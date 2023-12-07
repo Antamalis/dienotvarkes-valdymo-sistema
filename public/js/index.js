@@ -212,12 +212,13 @@ $(document).ready(function () {
         taskElement.querySelector("svg").setAttribute("data-bs-comment", task.comments);
         taskElement.querySelector("svg").setAttribute("data-bs-id", task._id);
         taskElement.querySelector("i.remove-task-icon").setAttribute("data-bs-id", task._id);
-        taskElement.querySelector("i.fa-calendar-alt").setAttribute("data-bs-id", task._id);
+        taskElement.querySelector("span.edit-due-date-icon").setAttribute("data-bs-id", task._id);
+        
 
         if(task.dueDate){
-            taskElement.querySelector("i.fa-calendar-alt").setAttribute("data-bs-date", task.dueDate);
+            taskElement.querySelector("span.edit-due-date-icon").setAttribute("data-bs-date", task.dueDate);
         }else{
-            taskElement.querySelector("i.fa-calendar-alt").setAttribute("data-bs-date", "");
+            taskElement.querySelector("span.edit-due-date-icon").setAttribute("data-bs-date", "");
         }
 
         taskElement.querySelector("input").addEventListener('change', (event) => {
